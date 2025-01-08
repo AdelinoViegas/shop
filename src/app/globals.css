@@ -2,20 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body{
+   background-color:#fff;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/*Header & Banner*/
+
+.discount::before{
+    content:'';
+    display: inline-block;
+    width:50px;
+    height:3px;
+    background-color: #FFD868;
+    margin-right:20px;
 }
+
+div[class*='min-w-[575px]']{
+   z-index:1;
+}
+
+div[class*='w-[510px]']{
+    z-index:-1;
+}
+
+h1[class*='text-white']{
+    font-weight:bold;
+}
+
+button[class*='bg-[#FFD868]']{
+    box-shadow: 4px 4px 2px #AC8957;
+    transition:.3s;
+}
+
+button[class*='bg-[#FFD868]']:hover{
+    background-color:#E2B267;
+}
+
+
+/*section Pet*/
+#category{
+    position: relative;
+    z-index:10;    
+}
+
+#buy{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    z-index:2; 
+}
+
+#buy::before{
+    content:url("/img/sec.webp");
+    display: block;
+    width:110px;
+    height:110px;
+    position:absolute;
+    top:-32px;
+    z-index:-1; 
+}
+
+
+
+/*banner de oferta*/
+
+#grid-template{
+    display:grid;
+    grid-template-columns: 36% 32% 32%;
+}
+
+@media screen and (max-width: 980px){
+    #grid-template{
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+
+
+
