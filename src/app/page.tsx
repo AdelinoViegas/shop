@@ -118,7 +118,6 @@ export default function Home() {
         <SectionPet />
         <SectionProduct/>
         <SectionOffer />
-      {/*<Link href="/Hooks"><h1 className="text-red-300 my-6">Testar Hooks</h1></Link>*/}
      </main>
   );
 }

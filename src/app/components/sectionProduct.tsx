@@ -111,7 +111,6 @@ export default function sectionProduct(){
                  </div>
                  
                 </div>
-
             </div>
         </section>
     );
